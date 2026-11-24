@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Razones por las que te amo</title>
+  <meta name="theme-color" content="#2a1030">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="corazones" id="corazones" aria-hidden="true"></div>
+
+  <main>
+    <!-- 1. PORTADA -->
+    <section class="vista activa" id="inicio" data-vista="inicio">
+      <div class="portada">
+        <div class="latido" aria-hidden="true">♥</div>
+        <h1>Razones por las que te amo</h1>
+        <p class="para" id="para"></p>
+        <button class="boton principal" data-ir="elegir">Descubrir</button>
+      </div>
+    </section>
+
+    <!-- 2. ELEGIR CÓMO VERLAS -->
+    <section class="vista" id="elegir" data-vista="elegir">
+      <div class="contenido">
+        <h2>¿Cómo quieres verlas?</h2>
+        <div class="opciones">
+          <button class="opcion" data-ir="resumen">
+            <span class="opcion-titulo">Lo esencial</span>
+            <span class="opcion-texto">Un resumen corto de lo que más amo de ti.</span>
+          </button>
+          <button class="opcion" data-ir="lista">
+            <span class="opcion-titulo">La lista interminable</span>
+            <span class="opcion-texto">Todas las razones, una tras otra, sin final.</span>
+          </button>
+        </div>
+        <button class="boton secundario" data-ir="inicio">Volver</button>
+      </div>
+    </section>
+
+    <!-- 3. RESUMEN -->
+    <section class="vista" id="resumen" data-vista="resumen">
+      <div class="contenido">
+        <h2>Lo esencial</h2>
+        <div class="resumen" id="resumen-lista"></div>
+        <p class="firma" id="firma"></p>
+        <div class="acciones">
+          <button class="boton secundario" data-ir="elegir">Volver</button>
+          <button class="boton principal" data-ir="lista">Ver la lista interminable</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. LISTA INTERMINABLE -->
+    <section class="vista" id="lista" data-vista="lista">
+      <div class="contenido">
+        <div class="barra-lista">
+          <button class="boton secundario" data-ir="elegir">Volver</button>
+          <span class="contador" id="contador">0 razones</span>
+        </div>
+        <h2>La lista interminable</h2>
+        <ol class="razones" id="razones-lista"></ol>
+        <div id="centinela" class="centinela" aria-hidden="true">♥</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
